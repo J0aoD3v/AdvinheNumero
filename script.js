@@ -11,7 +11,7 @@ function Chutar() {
   var chute = parseInt(document.getElementById("valor").value);
   if (tentativas >= 1) {
     if (chute == numeroSecreto) {
-      elementoResultado.innerHTML = ":D Acertou! Reiniciando...";
+      elementoResultado.innerHTML = "😄Acertou! Reiniciando...";
       setTimeout(function Reiniciar() {
         elementoDica.innerHTML = "";
         numeroSecreto = parseInt(Math.random() * 11, 10);
@@ -25,7 +25,7 @@ function Chutar() {
     } else {
       tentativas--;
       elementoResultado.innerHTML =
-        ":C Errou! tem mais " + tentativas + " chances";
+        "😥Errou! tem mais " + tentativas + " chances";
     }
     if (chute > numeroSecreto) {
       contador++;
@@ -37,7 +37,7 @@ function Chutar() {
   }
   if (tentativas == 0) {
     elementoResultado.innerHTML =
-      ":C Errou todas as tentativas, o número secreto era " +
+      "😥Errou todas as tentativas, o número secreto era " +
       numeroSecreto +
       ". Reiniciando...";
     setTimeout(function Reiniciar() {
